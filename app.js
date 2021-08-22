@@ -1,4 +1,7 @@
 const container = document.querySelector("container");
-for (let l = 1 ; l <= 16 ; l++){
-    const divs =document.createElement("div")
+function makeDivs (number){
+    const div = document.createElement("div")
+    for(let i = 1 ; l <= number ; l++){
+
+    }
 }
