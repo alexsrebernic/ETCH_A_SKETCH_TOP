@@ -7,4 +7,12 @@
     display: grid;
     width: 31.25rem;
     height: 31.25rem;
+    border-top: 0.5px solid black;
+    border-left: 0.5px solid black;
+    border-right: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+
+    div {
+        border: 0.2px solid black;
+    }
 }
