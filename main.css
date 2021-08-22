@@ -5,12 +5,10 @@
   padding: 0;
 }
 
-.divs {
+.drawTable {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[16];
-      grid-template-columns: repeat(16, 1fr);
-  -ms-grid-rows: (1fr)[16];
-      grid-template-rows: repeat(16, 1fr);
+  width: 31.25rem;
+  height: 31.25rem;
 }
 /*# sourceMappingURL=main.css.map */

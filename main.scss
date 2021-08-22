@@ -3,8 +3,8 @@
     margin: 0;
     padding: 0;
 }
-.divs {
+.drawTable {
     display: grid;
-    grid-template-columns: repeat(16,1fr);
-    grid-template-rows: repeat(16,1fr);
+    width: 31.25rem;
+    height: 31.25rem;
 }
