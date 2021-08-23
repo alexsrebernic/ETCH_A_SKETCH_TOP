@@ -6,7 +6,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 95vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,12 +17,97 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #EAECEE;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body footer p {
+  margin-top: 10px;
 }
 
 .project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 18.75rem;
+}
+
+.project .container h1 {
+  font-size: 30px;
+}
+
+.project .container .input {
+  width: 15em;
+  height: 3em;
+  border: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 300;
+  border: 1px solid #b1b0b0;
+  border-radius: 50px;
+  z-index: 2;
+  cursor: pointer;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+.project .container .input:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #EAECEE;
+}
+
+.project .container #color {
+  border: none;
+  width: 80px;
+  height: 80px;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+.project .container #color:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.project .svg {
+  width: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.project .svg svg {
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+.project .svg svg:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .drawTable {
@@ -33,5 +118,6 @@ body {
   box-shadow: 0px -2px 20px -2px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px -2px 20px -2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px -2px 20px -2px rgba(0, 0, 0, 0.75);
+  background-color: white;
 }
 /*# sourceMappingURL=main.css.map */
