@@ -45,7 +45,12 @@ colorModeInput.onclick = () => modeStatus("colorMode")
 randomColorInput.onclick = () => modeStatus("randomColor")
 eraserInput.onclick = () => modeStatus("eraser")
 clearTableInput.onclick = () =>  cleanTable()
-
+rangeTableInput.onchange = (e) => changeRange(e.target.value)
+function changeRange(value){
+    cleanTable()
+    sizeStatus(value)
+    makeTable(value)
+}
 
 
 function cleanTable(){
@@ -62,7 +67,14 @@ function paintBox(){
        this.style.backgroundColor = "white"
     }
    }
+ saveTable.onclick = function(){
+     drawTable.toBlob(document.getElementById("drawTable"))
+     .then(function(blob) {
+        window.saveAs(blob, 'yourDraw.png');
+      });
 
+
+ }
 
 
 
