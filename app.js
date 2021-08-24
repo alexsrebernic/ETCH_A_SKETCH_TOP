@@ -40,20 +40,28 @@ function makeTable (number){
 }
 }
 makeTable(16)
-
-function paintBox(color){
-    this.style.backgroundColor = "black"
-}
-colorInput.onchange = (e) => currentColor(e.target.value)
-colorModeInput.onclick = () => currentMode("colorMode")
-randomColorInput.onclick = () => currentMode("randomColor")
-eraserInput.onclick = () => currentMode("eraser")
+colorInput.onchange = (e) => colorStatus(e.target.value)
+colorModeInput.onclick = () => modeStatus("colorMode")
+randomColorInput.onclick = () => modeStatus("randomColor")
+eraserInput.onclick = () => modeStatus("eraser")
 clearTableInput.onclick = () =>  cleanTable()
+
+
 
 function cleanTable(){
     drawTable.innerHTML = ""
     makeTable(currentSize)
 }
+function paintBox(){
+   if (currentMode == "randomColor"){
+    var o = Math.round, r = Math.random, s = 255;
+    this.style.backgroundColor = 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+   } else if (currentMode == "colorMode"){
+       this.style.backgroundColor = currentColor
+   } else if (currentMode == "eraser"){
+       this.style.backgroundColor = "white"
+    }
+   }
 
 
 
