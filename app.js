@@ -1,3 +1,4 @@
+import domtoimage from "dom-to-image";
 const defaultSize = 16
 const defaultColor = "black"
 const defaultMode = "color"
@@ -15,15 +16,14 @@ function modeStatus (mode){
 function sizeStatus (size){
     currentSize = size
 }
-
 const colorInput = document.getElementById("color")
 const randomColorInput = document.getElementById("randomColor")
 const eraserInput = document.getElementById("eraser")
 const clearTableInput = document.getElementById("clear")
 const rangeTableInput = document.getElementById("rangeTable")
-const saveTable = document.getElementById("save")
 const colorModeInput = document.getElementById("colorMode")
 const drawTable = document.querySelector(".drawTable");
+const image = document.querySelector(".image")
 
 // Make the divs in the container 
 function makeTable (number){
@@ -67,14 +67,18 @@ function paintBox(){
        this.style.backgroundColor = "white"
     }
    }
- saveTable.onclick = function(){
-     drawTable.toBlob(document.getElementById("drawTable"))
-     .then(function(blob) {
-        window.saveAs(blob, 'yourDraw.png');
-      });
+  
+   const saveTable = document.getElementById("save")
+   saveTable.onclick = () => { 
+    domtoimage.toJpeg(document.getElementById('image'), { quality: 0.95 })
+    .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'my-image-name.jpeg';
+        link.href = dataUrl;
+        link.click();
+    });
+   }
 
-
- }
 
 
 
