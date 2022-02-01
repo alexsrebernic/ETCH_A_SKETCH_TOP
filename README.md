@@ -1,4 +1,9 @@
 # ETCH A SKETCH  
-Hi! , this is a  ETCH_A_SKETCH project from The Odin Project 
+## Alex Srebernic
 
-Live version : https://alexsrebernic.github.io/ETCH_A_SKETCH_TOP/
+**Hi! , this is a  ETCH_A_SKETCH project from The Odin Project**    
+
+__In this app you can paint in a variable frame with a lot of colors and if you like you can save your precious work of art! __
+
+
+[LIVE SERVER](https://alexsrebernic.github.io/ETCH_A_SKETCH_TOP/)
